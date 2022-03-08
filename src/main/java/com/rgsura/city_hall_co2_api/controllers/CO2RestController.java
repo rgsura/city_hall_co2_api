@@ -26,7 +26,7 @@ public class CO2RestController {
     @ReadRoleRequired
     @GetMapping("/city/{city}/co2readings")
     public ResponseEntity<CO2Levels> queryCO2Readings(
-            @Parameter(example = "Vienna")
+            @Parameter(example = "Wien")
             @PathVariable("city") String city,
             @Parameter(example = "Penzing")
             @RequestParam(value = "district", required = false) String district,
@@ -49,7 +49,7 @@ public class CO2RestController {
     @WriteRoleRequired
     @PostMapping("/city/{city}/district/{district}/co2reading")
     public ResponseEntity<CO2Level> insertCO2Reading(
-            @Parameter(example = "Vienna")
+            @Parameter(example = "Wien")
             @PathVariable("city") String city,
             @Parameter(example = "Penzing")
             @PathVariable("district") String district,

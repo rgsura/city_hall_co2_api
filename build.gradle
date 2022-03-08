@@ -56,3 +56,9 @@ tasks.named('asciidoctor') {
     inputs.dir snippetsDir
     dependsOn test
 }
+
+bootRun {
+    if (project.hasProperty('args')) {
+        args project.args.split(';')
+    }
+}
